@@ -90,6 +90,11 @@
             <x-responsive-nav-link :href="route('amplop.index')" :active="request()->routeIs('amplop.*')">
                 {{ __('Amplop') }}
             </x-responsive-nav-link>
+            @can('admin')
+                <x-responsive-nav-link :href="route('users.index')" :active="request()->routeIs('users.*')">
+                    {{ __('Users') }}
+                </x-responsive-nav-link>
+            @endcan
         </div>
 
         <!-- Responsive Settings Options -->

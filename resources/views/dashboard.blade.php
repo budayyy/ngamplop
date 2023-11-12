@@ -18,24 +18,43 @@
     <div class="py-4">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="overflow-hidden sm:rounded-lg">
-                <div class="grid w-full grid-cols-1 lg:grid-cols-4 lg:gap-4">
+                <div class="grid w-full grid-cols-1 lg:grid-cols-4 lg:gap-4 py-2">
                     {{-- kondangan --}}
-                    <div class="bg-white border p-8 rounded mb-2 mx-2 lg:mb-0 lg:mx-0">
-                        <p class="mb-2 text-base font-normal text-gray-800">Kondangan</p>
-                        <h3 class="text-2xl font-bold text-black">{{ $jumlahKondangan }}</h3>
-                    </div>
+                    <a href="{{ route('amplop.index') }}"
+                        class="bg-white border p-8 rounded mb-2 mx-2 lg:mb-0 lg:mx-0 hover:border-blue-500 hover:bg-gradient-to-br hover:from-blue-100 hover:via-white hover:to-sky-100 group">
+                        <p class="mb-2 text-lg font-bold text-gray-800 group-hover:text-blue-500">Kondangan</p>
+                        <h3 class="text-3xl font-extrabold text-black group-hover:text-blue-500">{{ $jumlahKondangan }}
+                        </h3>
+                    </a>
                     {{-- biaya pengeluaran --}}
-                    <div class="bg-white border p-8 rounded mb-2 mx-2 lg:mb-0 lg:mx-0">
-                        <p class="mb-2 text-base font-normal text-gray-800">Pengeluaran</p>
-                        <h3 class="text-2xl font-bold text-black">Rp. {{ number_format($jumlahPengeluaran) }}</h3>
-                    </div>
+                    <a href="{{ route('amplop.index') }}"
+                        class="bg-white border p-8 rounded mb-2 mx-2 lg:mb-0 lg:mx-0 hover:border-blue-500 hover:bg-gradient-to-br hover:from-blue-100 hover:via-white hover:to-sky-100 group">
+                        <p class="mb-2 text-lg font-bold text-gray-800 group-hover:text-blue-500">Pengeluaran</p>
+                        <h3 class="text-3xl font-extrabold text-black group-hover:text-blue-500">Rp.
+                            {{ number_format($jumlahPengeluaran) }}</h3>
+                    </a>
                     @can('admin')
                         {{-- users --}}
-                        <div class="bg-white border p-8 rounded mb-2 mx-2 lg:mb-0 lg:mx-0">
-                            <p class="mb-2 text-base font-normal text-gray-800">User</p>
-                            <h3 class="text-2xl font-bold text-black">{{ $jumlahUser }}</h3>
-                        </div>
+                        <a href="{{ route('users.index') }}"
+                            class="bg-white border p-8 rounded mb-2 mx-2 lg:mb-0 lg:mx-0 hover:border-blue-500 hover:bg-gradient-to-br hover:from-blue-100 hover:via-white hover:to-sky-100 group">
+                            <p class="mb-2 text-lg font-bold text-gray-800 group-hover:text-blue-500">User</p>
+                            <h3 class="text-3xl font-extrabold text-black group-hover:text-blue-500">{{ $jumlahUser }}
+                            </h3>
+                        </a>
                     @endcan
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lg:py-2">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="overflow-hidden sm:rounded-lg">
+                <div class="w-full py-4">
+                    <a href="{{ route('amplop.create') }}"
+                        class="py-4 px-8 block mx-2 lg:mx-0 lg:inline-block text-blue-500 rounded-md bg-blue-100 border border-blue-300 text-base font-semibold hover:border-blue-700 hover:bg-blue-200 hover:text-blue-600">+
+                        Tambah
+                        Amplop</a>
                 </div>
             </div>
         </div>
