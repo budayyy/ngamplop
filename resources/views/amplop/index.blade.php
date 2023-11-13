@@ -31,6 +31,7 @@
                                                 Nama</th>
                                             <th class="table-header">alamat</th>
                                             <th class="table-header">tanggal</th>
+                                            <th class="table-header">metode</th>
                                             <th class="table-header">nominal</th>
                                             <th class="table-header">status</th>
                                             <th class="table-header">keterangan</th>
@@ -47,7 +48,10 @@
                                                     {{ $item->alamat }}
                                                 </td>
                                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                    {{ $item->tanggal }}
+                                                    {{ date('d M Y', strtotime($item->tanggal)) }}
+                                                </td>
+                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                    {{ $item->metode }}
                                                 </td>
                                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                                     {{ number_format($item->nominal) }}

@@ -9,7 +9,7 @@ class Amplop extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama', 'user_id', 'alamat', 'tanggal', 'nominal', 'status', 'keterangan'];
+    protected $fillable = ['nama', 'user_id', 'alamat', 'tanggal', 'metode', 'nominal', 'status', 'keterangan'];
 
     public function user()
     {

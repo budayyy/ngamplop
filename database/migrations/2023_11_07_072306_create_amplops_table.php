@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('alamat');
             $table->date('tanggal');
+            $table->string('metode');
             $table->integer('nominal');
             $table->integer('status')->default(0);
             $table->text('keterangan');

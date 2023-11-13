@@ -34,6 +34,15 @@
                         </div>
 
                         <div>
+                            <x-input-label for="metode" :value="__('Metode Bayar')" />
+                            <x-text-input id="metode" name="metode" type="text" class="mt-1 block w-full"
+                                required autofocus autocomplete="metode" />
+                            <p class="text-xs text-gray-500 my-2 font-light">cth: tunai, gopay, shopeepay, bca, mandiri
+                                dll</p>
+                            <x-input-error class="mt-2" :messages="$errors->get('metode')" />
+                        </div>
+
+                        <div>
                             <x-input-label for="nominal" :value="__('Nominal')" />
                             <x-text-input id="nominal" name="nominal" type="number" class="mt-1 block w-full"
                                 required autofocus autocomplete="nominal" />
@@ -44,6 +53,7 @@
                             <x-input-label for="keterangan" :value="__('Keterangan')" />
                             <x-text-input id="keterangan" name="keterangan" type="text" class="mt-1 block w-full"
                                 required autofocus autocomplete="keterangan" />
+                            <p class="text-xs text-gray-500 my-2 font-light">cth: teman kerja, teman kuliah dll..</p>
                             <x-input-error class="mt-2" :messages="$errors->get('keterangan')" />
                         </div>
 

@@ -21,14 +21,14 @@
                 <div class="grid w-full grid-cols-1 lg:grid-cols-4 lg:gap-4 py-2">
                     {{-- kondangan --}}
                     <a href="{{ route('amplop.index') }}"
-                        class="bg-white border p-8 rounded mb-2 mx-2 lg:mb-0 lg:mx-0 hover:border-blue-500 hover:bg-gradient-to-br hover:from-blue-100 hover:via-white hover:to-sky-100 group">
+                        class="bg-white border p-8 rounded mb-2 mx-2 lg:mb-0 lg:mx-0 hover:border-blue-500 hover:bg-gradient-to-br hover:from-blue-100 hover:via-white hover:to-sky-100 group border-blue-200">
                         <p class="mb-2 text-lg font-bold text-gray-800 group-hover:text-blue-500">Kondangan</p>
                         <h3 class="text-3xl font-extrabold text-black group-hover:text-blue-500">{{ $jumlahKondangan }}
                         </h3>
                     </a>
                     {{-- biaya pengeluaran --}}
                     <a href="{{ route('amplop.index') }}"
-                        class="bg-white border p-8 rounded mb-2 mx-2 lg:mb-0 lg:mx-0 hover:border-blue-500 hover:bg-gradient-to-br hover:from-blue-100 hover:via-white hover:to-sky-100 group">
+                        class="bg-white border p-8 rounded mb-2 mx-2 lg:mb-0 lg:mx-0 hover:border-blue-500 hover:bg-gradient-to-br hover:from-blue-100 hover:via-white hover:to-sky-100 group border-blue-200">
                         <p class="mb-2 text-lg font-bold text-gray-800 group-hover:text-blue-500">Pengeluaran</p>
                         <h3 class="text-3xl font-extrabold text-black group-hover:text-blue-500">Rp.
                             {{ number_format($jumlahPengeluaran) }}</h3>
@@ -36,7 +36,7 @@
                     @can('admin')
                         {{-- users --}}
                         <a href="{{ route('users.index') }}"
-                            class="bg-white border p-8 rounded mb-2 mx-2 lg:mb-0 lg:mx-0 hover:border-blue-500 hover:bg-gradient-to-br hover:from-blue-100 hover:via-white hover:to-sky-100 group">
+                            class="bg-white border p-8 rounded mb-2 mx-2 lg:mb-0 lg:mx-0 hover:border-blue-500 hover:bg-gradient-to-br hover:from-blue-100 hover:via-white hover:to-sky-100 group border-blue-200">
                             <p class="mb-2 text-lg font-bold text-gray-800 group-hover:text-blue-500">User</p>
                             <h3 class="text-3xl font-extrabold text-black group-hover:text-blue-500">{{ $jumlahUser }}
                             </h3>

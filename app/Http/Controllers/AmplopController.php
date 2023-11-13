@@ -35,6 +35,7 @@ class AmplopController extends Controller
             'nama' => ['required', 'string', 'max:255'],
             'alamat' => ['required', 'string', 'max:255'],
             'tanggal' => ['required', 'date'],
+            'metode' => ['required', 'string', 'max:255'],
             'nominal' => ['required', 'integer', 'min:0'],
             'keterangan' => ['required', 'string', 'max:255'],
         ]);
@@ -44,6 +45,7 @@ class AmplopController extends Controller
             'nama' => $request->nama,
             'alamat' => $request->alamat,
             'tanggal' => $request->tanggal,
+            'metode' => $request->metode,
             'nominal' => $request->nominal,
             'keterangan' => $request->keterangan,
         ]);
@@ -79,6 +81,7 @@ class AmplopController extends Controller
             'nama' => ['required', 'string', 'max:255'],
             'alamat' => ['required', 'string', 'max:255'],
             'tanggal' => ['required', 'date'],
+            'metode' => ['required', 'string', 'max:255'],
             'nominal' => ['required', 'integer', 'min:0'],
             'keterangan' => ['required', 'string', 'max:255'],
         ]);
@@ -88,6 +91,7 @@ class AmplopController extends Controller
         $amplop->nama = $request->nama;
         $amplop->alamat = $request->alamat;
         $amplop->tanggal = $request->tanggal;
+        $amplop->metode = $request->metode;
         $amplop->nominal = $request->nominal;
         $amplop->keterangan = $request->keterangan;
         $amplop->save();
