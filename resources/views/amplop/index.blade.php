@@ -11,9 +11,14 @@
                 class="block md:inline-block bg-blue-500 p-4 text-white mb-4 md:mb-0 mx-2 md:mx-0 md:py-2 rounded">+
                 Tambah
                 Amplop</a>
-            {{-- <div class="mx-2 md:mx-0">
-                <input type="text" placeholder="cari nama.." class="w-full ">
-            </div> --}}
+            <div class="mx-2 md:mx-0">
+                <form action="{{ route('amplop.search') }}" class="flex justify-around items-center gap-2" method="get">
+                    <input type="text" name="nama" placeholder="Cari nama.."
+                        class="w-full border-blue-400 rounded-sm" value="{{ request()->nama }}" required>
+                    <button type="submit"
+                        class="py-2 px-4 border-blue-300 bg-blue-500 rounded-sm text-white font-medium">Cari</button>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -77,8 +82,7 @@
 
                                                         <button type="submit"
                                                             class="py-2 px-4 bg-red-100 rounded text-red-600 font-semibold border">hapus</button>
-                                                        {{-- <a href=""
-                                                        class="py-2 px-4 bg-red-100 rounded text-red-600 font-semibold border">hapus</a> --}}
+
                                                     </form>
                                                 </td>
                                             </tr>
@@ -89,7 +93,16 @@
                                     {{ $amplop->links() }}
                                 </div>
                             @else
-                                <h3 class="font-bold text-lg text-center">Tidak ada data</h3>
+                                <div class="py-2">
+                                    <h3 class="font-bold text-lg text-center">Tidak ada data</h3>
+
+                                    @if (request()->nama)
+                                        <div class="block text-center my-4">
+                                            <a href="{{ route('amplop.index') }}"
+                                                class="px-8 py-2 bg-blue-200 rounded-sm text-blue-600 border-blue-300 text-base font-medium">kembali</a>
+                                        </div>
+                                    @endif
+                                </div>
                             @endif
                         </div>
                     </div>

@@ -37,6 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // amplop
+    Route::get('/amplop/search', [AmplopController::class, 'search'])->name('amplop.search');
     Route::resource('/amplop', AmplopController::class);
 });
 

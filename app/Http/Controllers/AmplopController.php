@@ -107,4 +107,15 @@ class AmplopController extends Controller
         $amplop->delete();
         return to_route('amplop.index');
     }
+
+    public function search(Request $request)
+    {
+        $amplop = Amplop::where('user_id', auth()->user()->id)
+            ->where('nama', 'like', '%' . $request->nama . '%')
+            ->paginate(10);
+
+        return view('amplop.index', [
+            'amplop' => $amplop
+        ]);
+    }
 }
