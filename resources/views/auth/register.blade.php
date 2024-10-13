@@ -46,7 +46,7 @@
                 Akun</button>
         </div>
 
-        <div class="w-full my-4 flex justify-center items-center">
+        {{-- <div class="w-full my-4 flex justify-center items-center">
             <span class="w-full border border-gray-100"></span>
             <span class="px-4 text-sm">atau</span>
             <span class="w-full border border-gray-100"></span>
@@ -58,7 +58,7 @@
                 <img src="{{ asset('img/google-icon.png') }}" alt="google" class="w-6">
                 Masuk dengan google
             </a>
-        </div>
+        </div> --}}
 
         <div class="my-4 w-full text-center text-sm font-normal">
             <p>Sudah punya akun? <a href="{{ route('login') }}"

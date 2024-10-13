@@ -27,8 +27,8 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/auth/redirect', [GoogleAuthController::class, 'redirectToGoogle'])->name('google.redirect');
-Route::get('/auth/google/callback', [GoogleAuthController::class, 'handleCallbackGoogle']);
+// Route::get('/auth/redirect', [GoogleAuthController::class, 'redirectToGoogle'])->name('google.redirect');
+// Route::get('/auth/google/callback', [GoogleAuthController::class, 'handleCallbackGoogle']);
 
 
 Route::middleware('auth')->group(function () {

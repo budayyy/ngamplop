@@ -132,6 +132,10 @@
                         class="bg-blue-500 text-white rounded hover:bg-blue-700 hover:text-white">
                         {{ __('Login') }}
                     </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('register')"
+                        class="bg-blue-500 text-white rounded hover:bg-blue-700 hover:text-white mt-4">
+                        {{ __('Register') }}
+                    </x-responsive-nav-link>
                 </div>
             @endauth
         </div>

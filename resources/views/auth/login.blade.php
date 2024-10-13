@@ -49,19 +49,19 @@
         </div>
     </form>
 
-    <div class="w-full my-4 flex justify-center items-center">
+    {{-- <div class="w-full my-4 flex justify-center items-center">
         <span class="w-full border border-gray-100"></span>
         <span class="px-4 text-sm">atau</span>
         <span class="w-full border border-gray-100"></span>
-    </div>
+    </div> --}}
 
-    <div class="my-4 w-full">
+    {{-- <div class="my-4 w-full">
         <a href="{{ route('google.redirect') }}"
             class="w-full p-3 rounded-md bg-white border flex justify-center gap-2 hover:bg-gray-50">
             <img src="{{ asset('img/google-icon.png') }}" alt="google" class="w-6">
             Masuk dengan google
         </a>
-    </div>
+    </div> --}}
 
     <div class="my-4 w-full text-center text-sm font-normal">
         <p>belum punya akun? <a href="{{ route('register') }}"
